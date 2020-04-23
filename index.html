@@ -31,11 +31,47 @@
     <br>
 
     <!--Boton que llamara a la funcion sumar-->
-    <button>SUMAR</button><br>
+    <button onclick="sumar()">SUMAR</button><br>
 
     <!--Campo donde se mostrara el resultados-->
     <label for="resultado">Resultado de la suma</label>
     <input type= "number" id="resultado" name="resultado"> 
+
+    <script>
+        function sumar(){
+
+            //Variables que se utilizaran
+            var a;
+            var b;
+            var resultado;
+
+            //Valores del formulario
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var resultado;
+
+            //verificar si las casillas de las variables estan en blanco
+
+            if(a == "" ){
+                a = 0;
+            }else{
+               a = parseInt(a);
+            }
+
+            if(b == "" ){
+                b = 0;
+            }else{
+               b = parseInt(b);
+            }
+
+            //enviamos la suma de los valores
+            resultado = a + b;
+
+            //mostramos resultado
+            document.getElementById("resultado").value = resultado;
+
+        }
+    </script>
 
 
 </body>
